@@ -12,6 +12,31 @@ angular
         $routeSegmentProvider.segment( "albunes", {
             controller: "AlbunesCtrl",
             templateUrl: "views/Albunes.html",
+            /*resolve: {
+                Peliculas: ["ApiService", function(ApiService) {
+                    return ApiService.obtenerDatos("movie/upcoming");
+                }]
+            }*/
+        });
+
+        $routeSegmentProvider.segment( "bandas", {
+            controller: "BandasCtrl",
+            templateUrl: "views/Bandas.html",
+            /*resolve: {
+             Peliculas: ["ApiService", function(ApiService) {
+             return ApiService.obtenerDatos("movie/upcoming");
+             }]
+             }*/
+        });
+
+        $routeSegmentProvider.segment( "generos", {
+            controller: "GenerosCtrl",
+            templateUrl: "views/Generos.html",
+            /*resolve: {
+             Peliculas: ["ApiService", function(ApiService) {
+             return ApiService.obtenerDatos("movie/upcoming");
+             }]
+             }*/
         });
 
         $routeProvider.otherwise({
