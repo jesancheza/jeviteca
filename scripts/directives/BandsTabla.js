@@ -1,10 +1,10 @@
 
 angular
     .module("jeviteca")
-    .directive("elementoTabla", function(){
+    .directive("bandsTabla", function(){
         return {
             restrict: "AE",
-            templateUrl: "views/ElementoTabla.html",
+            templateUrl: "views/BandsTabla.html",
             replace: true,
             scope: {
                 model: "="
