@@ -12,11 +12,11 @@ angular
         $routeSegmentProvider.segment( "albunes", {
             controller: "AlbunesCtrl",
             templateUrl: "views/Albunes.html",
-            /*resolve: {
-                Peliculas: ["ApiService", function(ApiService) {
-                    return ApiService.obtenerDatos("movie/upcoming");
+            resolve: {
+                Albums: ["AlbumsProvider", function(AlbumsProvider) {
+                    return AlbumsProvider.getAlbums();
                 }]
-            }*/
+            }
         });
 
         $routeSegmentProvider.segment( "bandas", {

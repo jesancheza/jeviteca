@@ -1,3 +1,18 @@
 
 
-<h3>Listado de Álbunes</h3>
+<h3>Álbunes</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Título</th>
+            <th>Año</th>
+            <th>Grupo</th>
+            <th>Favorito</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr elemento-tabla ng-repeat="album in albums | orderBy:['title','year']" model="album">
+        </tr>
+    </tbody>
+</table>
