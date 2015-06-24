@@ -1,2 +1,14 @@
 
 <h2>Generos musicales</h2>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Favoritos</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr elemento-tabla ng-repeat="gen in genres | orderBy:['name']" model="gen">
+    </tr>
+    </tbody>
+</table>
