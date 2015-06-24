@@ -6,7 +6,7 @@ angular
             restrict: "EA",
             replace: true,
             scope: {
-                idPelicula: "="
+                id: "="
             },
             templateUrl: "views/Favoritos.html",
             link: function(scope){
