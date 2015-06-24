@@ -22,11 +22,11 @@ angular
         $routeSegmentProvider.segment( "bandas", {
             controller: "BandasCtrl",
             templateUrl: "views/Bandas.html",
-            /*resolve: {
-             Peliculas: ["ApiService", function(ApiService) {
-             return ApiService.obtenerDatos("movie/upcoming");
+            resolve: {
+             Bands: ["BandsProvider", function(BandsProvider) {
+                return BandsProvider.getBands();
              }]
-             }*/
+             }
         });
 
         $routeSegmentProvider.segment( "generos", {

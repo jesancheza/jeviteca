@@ -1,2 +1,15 @@
 
 <h2>Bandas musicales</h2>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Origen</th>
+        <th>Favorito</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr elemento-tabla ng-repeat="band in bands | orderBy:['title','year']" model="band">
+    </tr>
+    </tbody>
+</table>

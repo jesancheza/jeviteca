@@ -1,9 +1,9 @@
 
 <tr>
-    <td><img ng-src="#images/{{ ::model.image }}"/></td>
-    <td>{{ ::model.title }}</td>
-    <td>{{ ::model.year }}</td>
-    <td>{{ ::model.band.name}}</td>
+    <td ng-if="model.image"><img ng-src="#images/{{ ::model.image }}"/></td>
+    <td>{{ :: (model.title || model.name) }}</td>
+    <td>{{ :: (model.year || model.origin) }}</td>
+    <td ng-if="model.band.name">{{ ::model.band.name}}</td>
     <td>
         <span favoritos id-album="model.id"></span>
     </td>
