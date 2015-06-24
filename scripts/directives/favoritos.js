@@ -6,22 +6,23 @@ angular
             restrict: "EA",
             replace: true,
             scope: {
-                idAlbum: "="
+                id: "=",
+                section: "@"
             },
             templateUrl: "views/Favoritos.html",
             link: function(scope){
 
                 scope.esFavorito = function() {
-                    var favorito = localStorage.getItem("album_"+ scope.idAlbum);
+                    var favorito = localStorage.getItem(scope.section+"_"+ scope.id);
                     return favorito === "true";
                 };
 
                 scope.hacerFavorito = function(){
-                    localStorage.setItem("album_"+ scope.idAlbum, "true");
+                    localStorage.setItem(scope.section+"_"+ scope.id, "true");
                 };
 
                 scope.quitarFavorito = function(){
-                    localStorage.removeItem("album_"+ scope.idAlbum);
+                    localStorage.removeItem(scope.section+"_"+ scope.id);
                 };
             }
         };
