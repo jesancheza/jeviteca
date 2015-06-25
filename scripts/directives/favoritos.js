@@ -18,11 +18,19 @@ angular
                 };
 
                 scope.hacerFavorito = function(){
-                    localStorage.setItem(scope.section+"_"+ scope.id, "true");
+                    localStorage.setItem(scope.section + "_" + scope.id, "true");
                 };
 
                 scope.quitarFavorito = function(){
-                    localStorage.removeItem(scope.section+"_"+ scope.id);
+                    localStorage.removeItem(scope.section + "_" + scope.id);
+                };
+
+                scope.soportaLocalStorage = function(){
+                    if (typeof(Storage) !== "undefined") {
+                        return true;
+                    }else{
+                        return false;
+                    }
                 };
             }
         };

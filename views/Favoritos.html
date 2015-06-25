@@ -1,5 +1,6 @@
 
 <span>
-    <span ng-click="quitarFavorito()" ng-show="esFavorito()" class="glyphicon glyphicon-star"></span>
-    <span ng-click="hacerFavorito()" ng-hide="esFavorito()" class="glyphicon glyphicon-star-empty"></span>
+    <span ng-if="soportaLocalStorage()" ng-click="quitarFavorito()" ng-show="esFavorito()" class="glyphicon glyphicon-star"></span>
+    <span ng-if="soportaLocalStorage()" ng-click="hacerFavorito()" ng-hide="esFavorito()" class="glyphicon glyphicon-star-empty"></span>
+    <label ng-if="!soportaLocalStorage()">Su navegador no soporta localstorage.</label>
 </span>
