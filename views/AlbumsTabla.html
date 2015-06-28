@@ -1,7 +1,9 @@
 
 <tr>
     <td><img ng-src="images/{{::model.image}}" class="img-rounded" height="20%" width="20%"/></td>
-    <td>{{ :: model.title }}</td>
+    <td>
+        <a ng-href="#albunes/{{::model.id}}/detalle">{{ :: model.title }}</a>
+    </td>
     <td>{{ :: model.year | lanzamiento }}</td>
     <td ng-if="model.band.name">{{ ::model.band.name}}</td>
     <td>

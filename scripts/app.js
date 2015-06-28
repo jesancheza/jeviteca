@@ -7,7 +7,8 @@ angular
 
         $routeSegmentProvider.when( "/albunes", "albunes" );
         $routeSegmentProvider.when( "/bandas", "bandas" );
-        $routeSegmentProvider.when( "/generos", "generos" );
+        $routeSegmentProvider.when( "/generos", "generos" )
+        $routeSegmentProvider.when( "/albunes/:id/detalle", "albunes_detail")
 
         $routeSegmentProvider.segment( "albunes", {
             controller: "AlbunesCtrl",
@@ -37,6 +38,16 @@ angular
                 return GenresProvider.getGenres();
              }]
              }
+        });
+
+        $routeSegmentProvider.segment( "albunes_detail", {
+            controller: "AlbumDetalleCtrl",
+            templateUrl: "views/albumDetalle.html",
+            resolve: {
+                Album: ["AlbumsProvider", "$routeParams", function(AlbumsProvider, $routeParams){
+                    return AlbumsProvider.getAlbum($routeParams.id);
+                }]
+            }
         });
 
         $routeProvider.otherwise({
