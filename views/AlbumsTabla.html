@@ -2,7 +2,7 @@
 <tr>
     <!--td><img ng-src="jeviteca/images/{{ ::model.image }}"/></td-->
     <td>{{ :: model.title }}</td>
-    <td>{{ :: model.year }}</td>
+    <td>{{ :: model.year | lanzamiento }}</td>
     <td ng-if="model.band.name">{{ ::model.band.name}}</td>
     <td>
         <span favoritos id="model.id" section="album"></span>
