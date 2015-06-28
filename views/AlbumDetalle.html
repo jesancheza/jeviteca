@@ -1,9 +1,9 @@
 
 <article id="detalle_album">
-    <header>
+    <section>
         <span class="col-md-6">
             <h3>{{::album.title}}</h3>
-            <img ng-src="images/{{::album.image}}">
+            <img ng-src="images/{{::album.image}}" class="img-rounded">
         </span>
         <span class="col-md-6">
             <p>
@@ -18,8 +18,13 @@
                 <span class="col-md-6"><strong>Género:</strong></span>
                 <span class="col-md-6">{{::album.genre.name}}</span>
             </p>
+            <p class="col-md-8">
+                <span id="return">
+                    <a href="#/albunes">Volver a Albunes</a>
+                </span>
+            </p>
         </span>
-    </header>
+    </section>
     <section class="col-md-8">
         <table class="table table-striped">
             <thead>

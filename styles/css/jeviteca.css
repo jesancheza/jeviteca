@@ -1,8 +1,9 @@
 
-#detalle_album header{
-    margin-top: 15px;
-}
-
 #detalle_album section{
     margin-top: 20px;
+}
+
+#return{
+    float: right;
+    margin-top: 50px;
 }
